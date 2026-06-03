@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# ClipVault
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight personal cloud clipboard built for one thing: getting frequently used text snippets from any device in seconds.
 
-Currently, two official plugins are available:
+No accounts. No databases. No unnecessary complexity.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Open the website, find what you need, copy it, close the tab.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Fast snippet search
+* One-click copy
+* Mobile-friendly interface
+* Dark mode
+* Categories and pinned snippets
+* Visual snippet editor
+* JSON export workflow
+* No backend required
+* Deploy anywhere
 
-## Expanding the ESLint configuration
+## How It Works
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+All snippets are stored in:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+public/snippets.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The application loads this file on startup and displays the snippets.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Changes made through the editor are not saved automatically.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Instead:
+
+1. Open edit mode
+2. Create, edit, or delete snippets
+3. Click **Export JSON**
+4. Copy the generated JSON
+5. Replace the contents of `public/snippets.json`
+6. Deploy
+
+This keeps the project simple while ensuring the same snippets are available on every device.
+
+## Use Cases
+
+* Frequently used prompts
+* Links
+* Commands
+* Business information
+* School resources
+* Contact details
+* Anything you repeatedly copy and paste
+
+## Tech Stack
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+
+## Philosophy
+
+Most clipboard tools are overengineered.
+
+ClipVault is intentionally simple.
+
+The goal is not to manage thousands of notes.
+
+The goal is to type a URL, copy something important in a few seconds, and move on with your day.
