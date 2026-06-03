@@ -1,47 +1,20 @@
 [
   {
-    "id": "1",
-    "title": "ChatGPT System Prompt",
-    "category": "Prompts",
-    "content": "You are a helpful assistant. Answer concisely and accurately. When unsure, say so.",
+    "title": "Avtoizpit - Result + Questions",
+    "content": "javascript:localStorage.setItem(\"test_set_result_key\",'{\"id\":244932437,\"assessedAt\":null,\"subCategory\":{\"id\":3,\"categoryId\":1,\"name\":\"B\",\"learningPlans\":[],\"examDurationMinutes\":40},\"receivedPoints\":97,\"totalPoints\":97,\"correctQuestionsCount\":45,\"incorrectQuestionsCount\":0,\"passed\":true}');localStorage.setItem(\"test_set_key\",localStorage.getItem(\"test_set_key\").replace(/\"checked\":false,\"correct\":true/g,'\"checked\":true,\"correct\":true').replace(/\"checked\":true,\"correct\":false/g,'\"checked\":false,\"correct\":false'));location.reload();",
+    "category": "Personal",
+    "id": "g6mrhh6to39mpxxjxet",
     "pinned": true,
-    "createdAt": 1717401600000,
-    "updatedAt": 1717401600000
+    "createdAt": 1780482909413,
+    "updatedAt": 1780482911277
   },
   {
-    "id": "2",
-    "title": "Kill port 3000",
-    "category": "Commands",
-    "content": "lsof -ti:3000 | xargs kill -9",
+    "title": "Avtoizpit - Result Only",
+    "content": "javascript:\nlocalStorage.setItem(\"test_set_result_key\",'{\"id\":244932437,\"assessedAt\":null,\"subCategory\":{\"id\":3,\"categoryId\":1,\"name\":\"B\",\"learningPlans\":[],\"examDurationMinutes\":40},\"receivedPoints\":97,\"totalPoints\":97,\"correctQuestionsCount\":45,\"incorrectQuestionsCount\":0,\"passed\":true}');\nlocalStorage.setItem(\"test_set_key\",'{\"id\":244932437,\"assessedAt\":null,\"subCategory\":{\"id\":3,\"categoryId\":1,\"name\":\"B\",\"learningPlans\":[],\"examDurationMinutes\":40},\"receivedPoints\":97,\"totalPoints\":97,\"correctQuestionsCount\":45,\"incorrectQuestionsCount\":0,\"passed\":true}');\nlocation.reload();",
+    "category": "Personal",
+    "id": "r2ldgfwplbnmpxxjm15",
     "pinned": false,
-    "createdAt": 1717401500000,
-    "updatedAt": 1717401500000
-  },
-  {
-    "id": "3",
-    "title": "Meeting Email Template",
-    "category": "Business",
-    "content": "Hi [Name],\n\nI hope this email finds you well. I wanted to follow up on our recent conversation and schedule a quick sync.\n\nWould [Day] at [Time] work for you?\n\nBest,\n[Your name]",
-    "pinned": false,
-    "createdAt": 1717401400000,
-    "updatedAt": 1717401400000
-  },
-  {
-    "id": "4",
-    "title": "Git Undo Last Commit",
-    "category": "Commands",
-    "content": "git reset --soft HEAD~1",
-    "pinned": false,
-    "createdAt": 1717401300000,
-    "updatedAt": 1717401300000
-  },
-  {
-    "id": "5",
-    "title": "Anthropic SDK Repo",
-    "category": "Links",
-    "content": "https://github.com/anthropics/anthropic-sdk-python",
-    "pinned": false,
-    "createdAt": 1717401200000,
-    "updatedAt": 1717401200000
+    "createdAt": 1780482894665,
+    "updatedAt": 1780482894665
   }
 ]
