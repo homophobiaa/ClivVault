@@ -1,16 +1,8 @@
 import type { Snippet } from '../types'
 
-const KEY = 'clipvault_snippets'
-
-export function loadSnippets(): Snippet[] {
-  try {
-    const raw = localStorage.getItem(KEY)
-    return raw ? JSON.parse(raw) : []
-  } catch {
-    return []
-  }
-}
-
-export function saveSnippets(snippets: Snippet[]): void {
-  localStorage.setItem(KEY, JSON.stringify(snippets))
+export async function fetchSnippets(): Promise<Snippet[]> {
+  const res = await fetch('/snippets.json')
+  if (!res.ok) throw new Error(`Could not load snippets.json (${res.status})`)
+  const data: unknown = await res.json()
+  return Array.isArray(data) ? (data as Snippet[]) : []
 }
